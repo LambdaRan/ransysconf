@@ -1,0 +1,8 @@
+
+# 配置目录
+export RSCF=$HOME/ransysconf
+
+# 配置zlua
+eval "$(lua $HOME/ransysconf/zlua/z.lua --init zsh once enhanced)"
+# 配置shell
+source ${RSCF}/shell/init.sh

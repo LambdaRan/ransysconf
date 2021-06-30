@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# contributor: lambda 
+# name: Bingo_Log::p 
+# key: binn
+# group: beco
+# --
+Bingo_Log::pushNotice(${1:KEY}, ${2:value});

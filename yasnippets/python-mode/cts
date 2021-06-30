@@ -1,0 +1,51 @@
+# -*- mode: snippet -*-
+# contributor: lambda
+# name: afdbiz cts template
+# key: cts_biz
+# group: cts
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+@file `(insert (buffer-name))`
+@brief $1
+@author randegang@baidu.com
+@date `(insert (format-time-string "%Y-%m-%d %H:%M:%S"))`
+"""
+
+from lib.afdbiz.afdbiz_import import *
+from lib.afdbiz.afdbiz_tester import *
+from lib.afdbiz.afdbiz_case import *
+import time
+import pdb
+# from collections import defaultdict
+
+class Test${2:Cts}(AfdBizCase):
+    """
+    Test $2
+    """
+    RESTART = False
+    quick = ["ALL"]
+    slow = []
+    daily = []
+    ignorelist = []
+
+    def setUp(self):
+        """每个test函数执行前，xts框架调用这个方法"""
+        pass
+
+    def tearDown(self):
+        """每个test函数执行后，xts框架会调用这个方法"""
+        pass
+
+    # def setupTestCase(self):
+    #     """back_up data"""
+    #     pass
+
+    # def tearDownTestCase(self):
+    #     """recover data"""
+    #     pass
+
+    def test$3(self):
+        """$0"""

@@ -1,0 +1,53 @@
+Last login: Tue Nov 17 17:18:38 on ttys007
+➜  ~  ls
+Applications   Documents      Library        Music          Postman        Sunlogin Files emacs-lambda   lambda         sensors        work
+Desktop        Downloads      Movies         Pictures       Public         baidu          go             ransysconf     test           加油.xlsx
+➜  ~  
+➜  ~  
+➜  ~  ls
+Applications   Documents      Library        Music          Postman        Sunlogin Files emacs-lambda   lambda         sensors        work
+Desktop        Downloads      Movies         Pictures       Public         baidu          go             ransysconf     test           加油.xlsx
+➜  ~  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

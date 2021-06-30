@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# contributor: lambda
+# name: Bingo_Log::w
+# key: binw
+# group: beco
+# --
+Bingo_Log::warning('lambda_start: ' . ${1:errmsg} . ' lambda_end');

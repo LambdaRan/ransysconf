@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# contributor: lambda
+# name: leetcode
+# key: leetcode
+# --
+#include <iostream>
+#include <string>
+
+#include "gtest/gtest.h"
+
+using namespace std;
+
+// Name: $0
+// Website:
+// Description:
+
+class Solution {
+
+public:
+
+$1
+
+};
+
+Solution solu;
+
+// TEST(Fuction, one) {}

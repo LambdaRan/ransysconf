@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# contributor: lambda
+# name: ran python template
+# key: leetcode
+# group: ran_python
+# --
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+$0
+"""
+
+# Name:
+# Website:
+# Description:
+import sys
+
+
+class Solution:
+
+
+# main
+if __name__ == "__main__":
+    pass
