@@ -1,0 +1,1 @@
+Invoke-Expression (& { (lua $HOME\ransysconf\zlua\z.lua --init  powershell once enhanced) -join "`n" })

@@ -71,6 +71,11 @@
 --regex-Lua=/^[ \t]*module[ \t]+([:alnum:]+)\/\1/f,function/
 --regex-Lua=/^[ \t]*module[ \t]+[[:alnum:]._]+\.([:alnum:]+)\/\1/f,function/
 
+--regex-LUA=/"^.*\s*function[ \t]*([a-zA-Z0-9_]+):([a-zA-Z0-9_]+).*$"/\2/f,function/ 
+--regex-LUA=/"^.*\s*function[ \t]*([a-zA-Z0-9_]+)\.([a-zA-Z0-9_]+).*$"/\2/f,function/ 
+--regex-LUA=/"^.*\s*function[ \t]*([a-zA-Z0-9_]+)\s*\(.*$"/\1/f,function/ 
+--regex-LUA=/"[ \t]{1}([a-zA-Z0-9_]+)[ \t]*[=][^=]"/\1/v,variable/ 
+
 --langmap=html:.htm.html.erb.cmp.page.component
 --regex-html=/[ \t]+ng-(controller|click|change|show|if|blur|focus|disabled|repeat)[ \t]*=[ \t]*['"][^[:alnum:]$]*([[:alnum:]$]{4,})/\2/a/
 --regex-html=/[ \t]+<(app-[[:alnum:]$-_]{3,})/\1/a/
