@@ -23,35 +23,49 @@ RAlt::LWin
 
 ; 快速退出
 ^q::
-send, !{f4}
+    send, !{f4}
+Return
+
+; 快速切换窗口
+Pause::
+    Send, ^!{Tab}
+Return
+
+;^Tab::
+;    Send, {Alt Down}{Tab}
+;Return
+
+; TODO: 双屏切换
+
+; 多桌面工作区
+; 创建多桌面工作区
+^PrintScreen::
+Send {LWin Down}{Ctrl Down}{d}{Ctrl Up}{LWin Up}
+Return
+; 删除桌面
+^!PrintScreen::
+    Send {LWin Down}{Ctrl Down}{f4}{Ctrl Up}{LWin Up}
+Return
+; 切换
+^!Left::
+send {LWin Down}{Ctrl Down}{Left}{Ctrl Up}{LWin Up}
+return
+^!Right::
+Send {LWin Down}{Ctrl Down}{Right}{Ctrl Up}{LWin Up}
 return
 
 
-launchOrSwitchEmacs()
+launchOrSwitchApp(name, path)
 {
-    IfWinExist ahk_class Emacs
+    IfWinExist ahk_class %name%
     {
-        WinActivate, ahk_class Emacs
+        WinActivate, ahk_class %name%
     }
     Else
     {
-        Run "C:\Program Files\Emacs\x86_64\bin\runemacs.exe"
+        Run %path%
     }
     Return
 }
-PrintScreen::launchOrSwitchEmacs()
-
-
-launchOrSwitchChrome()
-{
-    IfWinExist ahk_class Chrome_WidgetWin_1
-    {
-        WinActivate, ahk_class Chrome_WidgetWin_1
-    }
-    Else
-    {
-        Run "C:\Program Files\Google\Chrome\Application\chrome.exe"
-    }
-    Return
-}
-ScrollLock::launchOrSwitchChrome()
+PrintScreen::launchOrSwitchApp("Emacs", "C:\Program Files\Emacs\x86_64\bin\runemacs.exe")
+ScrollLock::launchOrSwitchApp("Chrome_WidgetWin_1", "C:\Program Files\Google\Chrome\Application\chrome.exe")
