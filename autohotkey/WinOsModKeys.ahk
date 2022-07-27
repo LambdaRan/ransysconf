@@ -3,10 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; https://wyagd001.github.io/zh-cn/docs/Hotkeys.htm
 ; 基本语法 Start
 ; ^ -> Ctrl
 ; ! -> Alt
 ; + -> Shift
+; # -> Win
 ; ; -> 单行注释 (single-line comment) 
 ; ` -> 转义字符 (escape character)
 ; :: -> 按键映射 (key mapping)
@@ -17,9 +19,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; 按键交换
 LAlt::LCtrl
-LCtrl::LAlt
-LWin::RAlt
-RAlt::LWin
+LCtrl::LWin
+LWin::LAlt
+; RAlt::LWin
 
 ; 快速退出
 ^q::
@@ -38,6 +40,11 @@ Return
 ; TODO: 双屏切换
 
 ; 多桌面工作区
+; Win -Tab：打开「任务视图」，相当于点击「可视化入口」。
+; Win -Ctrl-D：创建新的虚拟桌面。 
+; Win -Ctrl-F4：删除当前虚拟桌面。
+; Win -Ctrl-左键：切换到相邻左侧的虚拟桌面。
+; Win -Ctrl-右键：切换到相邻右侧的虚拟桌面。
 ; 创建多桌面工作区
 ^PrintScreen::
 Send {LWin Down}{Ctrl Down}{d}{Ctrl Up}{LWin Up}
@@ -47,12 +54,12 @@ Return
     Send {LWin Down}{Ctrl Down}{f4}{Ctrl Up}{LWin Up}
 Return
 ; 切换
-^!Left::
-send {LWin Down}{Ctrl Down}{Left}{Ctrl Up}{LWin Up}
-return
-^!Right::
-Send {LWin Down}{Ctrl Down}{Right}{Ctrl Up}{LWin Up}
-return
+; ^!Left::
+; send {LWin Down}{Ctrl Down}{Left}{Ctrl Up}{LWin Up}
+; return
+; ^!Right::
+; Send {LWin Down}{Ctrl Down}{Right}{Ctrl Up}{LWin Up}
+; return
 
 
 launchOrSwitchApp(name, path)
